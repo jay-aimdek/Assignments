@@ -26,3 +26,7 @@ select * from students order by dept;
 select * from students where dept = 7 or id=4;
 
 update students set name = 'bakhai' where name = 'dhairya';
+
+delete from students where name='bakhai';
+
+drop table students;
