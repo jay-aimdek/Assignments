@@ -1,0 +1,22 @@
+use temp;
+
+db.createCollection('person');
+
+db.person.insert([
+	{ name:'jay',
+	  age:20
+	},
+	{ name:'sheldon',
+	  occupation: 'actor',
+	  age:40
+	},
+	{ name:'chandler',
+	  occupation:'transposter'
+	}	
+])
+
+db.person.update({name:'jay'},{$set:{occupation:'sde'}})
+
+db.person.remove({name:'chandler'})
+
+db.person.drop();

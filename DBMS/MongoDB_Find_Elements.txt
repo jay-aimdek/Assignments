@@ -1,0 +1,15 @@
+use temp;
+
+db.peson.find();
+
+db.person.find().pretty();
+
+db.person.find({name:'jay'});
+
+db.person.createIndex({name:1});
+
+db.person.find({name:'jay'}).pretty();
+
+db.person.find().sort({age:1}).pretty();
+
+db.person.find().count();
