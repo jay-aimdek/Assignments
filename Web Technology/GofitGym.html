@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFitGym</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Ubuntu', sans-serif;
+            background: url(img/bg1.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: rgb(255, 255, 255);
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 60px;
+            top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .left img {
+            width: 83px;
+        }
+
+        .mid {
+            display: block;
+            width: 50%;
+            margin: 25px auto;
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 40px;
+            top: 20px;
+        }
+
+        .btn {
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 17px;
+            margin: 0px 10px;
+            padding: 4px 10px;
+            cursor: pointer;
+            background-color: rgb(26, 24, 24);
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: rgb(49, 48, 48);
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            padding: 20px 53px;
+            color: rgb(255, 255, 255)
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            text-decoration: underline;
+            color: rgb(197, 197, 197);
+        }
+
+        .container {
+            margin: 200px 80px;
+            text-align: center;
+            float: right;
+            padding: 40px;
+            width: 268px;
+            border: 2px solid white;
+            border-radius: 13px;
+        }
+
+        .formgrp input {
+            padding: 2px 4px;
+            margin: 15px 4px;
+            border: 2px solid grey;
+            border-radius: 7px;
+            text-align: center;
+            display: block;
+            width: 249px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .container button {
+            display: block;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class='header'>
+        <div class="left">
+            <img src="img/logo.jpg" alt="">
+            <div>GoFitGym</div>
+        </div>
+        <div class="mid">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <button class="btn">Call Now</button>
+            <button class="btn">Email Now</button>
+        </div>
+    </header>
+    <div class="container">
+        <h3>Join the Best Gym of Rajkot Now!!!</h3>
+        <form action="noaction.php">
+            <div class="formgrp">
+                <input type="text" placeholder="Enter your name ">
+            </div>
+            <div class="formgrp">
+                <input type="text" placeholder="Enter your mobile number">
+            </div>
+            <div class="formgrp">
+                <input type="text" placeholder="Enter your Email">
+            </div>
+            <div>
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
