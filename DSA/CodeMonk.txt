@@ -18,30 +18,22 @@ class TestClass {
                 a[i] = s.nextInt();
             }
             
-            while(k>0) {
-                k--;
-                int temp =a[n-1];
-                int tmp=a[0];
+            int start = n-(k%n);
 
-                int i = 0;
-                while(i<(n-1)){
-                    int tmp1 = a[i+1];
-                    a[i+1] = tmp;
-                    tmp = tmp1;
-                    i++;
-                }
-                a[0] = temp;
+            for(int i=start;i<n;i++) {
+                System.out.print(a[i]+" ");
+            }
+
+            for(int i=0;i<start;i++) {
+                System.out.print(a[i]+" ");
             }
             
-            for(int element : a) {
-                System.out.print(element);
-                System.out.print(" ");
-            }
             System.out.println();
         }
         s.close();
     }
 }
+
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -88,4 +80,41 @@ class TestClass{
 
 ---------------------------------------------------------------------------------------------------------------
 
-3)
+3) Minimum AND xor OR
+
+https://www.hackerearth.com/practice/codemonk/
+
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+
+        while(t>0) {
+            t--;
+            int n = s.nextInt();
+            int[] a = new int[n];
+
+            for(int i=0;i<n;i++) {
+                a[i] = s.nextInt();
+            }
+
+            Arrays.sort(a);
+            int min = a[n-1];
+            for(int i=n-1;i>0;i--) {
+                if(min > (a[i]^a[i-1])) {
+                    min = a[i]^a[i-1];
+                }
+            }
+
+            System.out.println(min);
+        }
+        s.close();
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+4)
