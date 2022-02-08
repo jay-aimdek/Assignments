@@ -117,4 +117,29 @@ class TestClass {
 
 ---------------------------------------------------------------------------------------------------------------
 
-4)
+4) Ali and Helping innocent people
+
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/cartag-948c2b02/
+
+import java.util.*;
+
+public class AliAndHelpingInnocentPeople {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        String str = s.nextLine();
+        int flag = 0;
+        if (((Integer.parseInt(str.substring(0, 1)) + Integer.parseInt(str.substring(1, 2))) % 2 == 0) && ((Integer.parseInt(str.substring(3, 4)) + Integer.parseInt(str.substring(4, 5))) % 2 == 0) && ((Integer.parseInt(str.substring(4, 5)) + Integer.parseInt(str.substring(5, 6))) % 2 == 0) && ((Integer.parseInt(str.substring(7, 8)) + Integer.parseInt(str.substring(8))) % 2 == 0) && (str.charAt(2) != 'A' && str.charAt(2) != 'E' && str.charAt(2) != 'I' && str.charAt(2) != 'O' && str.charAt(2) != 'U' && str.charAt(2) != 'Y') ) {
+            flag = 1;
+        } else {
+            flag = 0;
+        }
+       
+        if (flag == 1) {
+            System.out.println("valid");
+        } else {
+            System.out.println("invalid");
+        }
+
+    }
+}
