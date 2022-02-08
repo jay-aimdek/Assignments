@@ -5,33 +5,43 @@ https://www.hackerearth.com/practice/codemonk/
 import java.util.*;
 
 class TestClass {
-    public static void main(String args[] ) throws Exception {
-        Scanner s = new Scanner(System.in);
-        int t = s.nextInt();
 
-        while(t>0) {
+    public static void main(String args[]) throws Exception {
+
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+
+        while (t != 0) {
+
+            int n = sc.nextInt();
+
+            int k = sc.nextInt();
+
+            int noOfRotation = k % n;
+
+            sc.nextLine();
+
+            String[] str = sc.nextLine().split(" ");
+
+            StringBuffer output = new StringBuffer();
+
+            for (int i = 0; i < n; i++) {
+
+                output.append(str[(n + i - noOfRotation) % n] + " ");
+
+            }
+
+            System.out.print(output);
+
+            System.out.println("");
+
             t--;
-            int n = s.nextInt();
-            int k = s.nextInt();
-            int[] a = new int[n];
-            for(int i=0;i<n;i++) {
-                a[i] = s.nextInt();
-            }
-            
-            int start = n-(k%n);
 
-            for(int i=start;i<n;i++) {
-                System.out.print(a[i]+" ");
-            }
-
-            for(int i=0;i<start;i++) {
-                System.out.print(a[i]+" ");
-            }
-            
-            System.out.println();
         }
-        s.close();
+        sc.close();
     }
+
 }
 
 
@@ -143,3 +153,7 @@ public class AliAndHelpingInnocentPeople {
 
     }
 }
+
+------------------------------------------------------------------------------------------------------------
+
+5) 
